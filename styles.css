@@ -1,0 +1,489 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contain {
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+  background-color: coral;
+}
+
+.contain canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: #dddddd;
+}
+
+#space {
+  position: absolute;
+  height: 100vh;
+  opacity: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.asynamite {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 100px;
+  font-family: 'Quicksand';
+  font-weight: 500;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.asynamite .title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.asynamite .title .lt {
+  color: #ffe44e;
+}
+
+.asynamite .title .rt {
+  color: red;
+}
+
+.asynamite .coding {
+  padding: 10px 0px;
+  font-size: 1.3rem;
+}
+
+.asynamite .details {
+  margin-top: 20px;
+}
+
+.asynamite .details span {
+  padding: 5px;
+  margin: 5px 3px;
+  border: 1px solid black;
+}
+
+.asynamite .time {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.asynamite .result {
+  margin-top: 25px;
+  height: 40px;
+  width: 180px;
+  border: solid 1px black;
+  border-radius: none;
+  font-family: 'Quicksand';
+  font-weight: 600;
+  background-color: transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.asynamite .result:hover {
+  background-color: black;
+  cursor: pointer;
+  color: white;
+}
+
+.congratulate {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.congratulate p {
+  font-family: 'Lobster', cursive;
+  font-size: 6rem;
+}
+
+.banner {
+  position: absolute;
+  width: 140%;
+  height: 100vh;
+  background-color: black;
+  left: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.banner .vertical {
+  width: 10%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0px;
+}
+
+.banner .vertical p {
+  font-family: 'Roboto', cursive;
+  color: white;
+  font-size: 3rem;
+}
+
+.winners {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #245df8;
+  left: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.winners .congrats {
+  position: absolute;
+  top: 20px;
+  left: auto;
+  color: white;
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.winners .card {
+  background-color: white;
+  width: 22%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.winners .card:hover {
+  cursor: pointer;
+  background-color: #ebebeb;
+}
+
+.winners .card .card-image {
+  width: 100%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.winners .card .card-image img {
+  width: 40%;
+}
+
+.winners .card .card-text {
+  color: #2c2c2c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Quicksand';
+}
+
+.winners .card .card-text p {
+  text-align: center;
+  width: 100%;
+  padding: 5px 30px;
+}
+
+.winners .card .card-text :nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.winners .card .card-text :nth-child(2) {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.winners .card .card-text .text-winners {
+  display: none;
+}
+
+.winners .card .card-text .text-winners-names {
+  display: none;
+}
+
+.card-shifted {
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+}
+
+.congrats-shifted {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+}
+
+.final {
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  left: 15%;
+  width: 70%;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 30px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.final img {
+  width: 10%;
+}
+
+.final p {
+  width: 25%;
+  color: black;
+  font-family: 'Quicksand';
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.final-shifted {
+  top: 70%;
+}
+
+.winners-active {
+  left: 0%;
+}
+
+.banner-shifted {
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.banner-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  left: -20%;
+}
+
+.congratulate-shifted {
+  left: 0px;
+}
+
+.inactive {
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+
+@media (max-width: 576px) {
+  body {
+    height: auto;
+    overflow: visible;
+  }
+  #space {
+    width: 100%;
+    overflow: hidden;
+  }
+  .asynamite {
+    position: relative;
+    padding-left: 0px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .asynamite .result {
+    display: none;
+  }
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    left: 0%;
+    display: none;
+  }
+  .banner .vertical {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .congratulate {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    left: 0%;
+    background-color: #1f2f38;
+  }
+  .congratulate p {
+    font-size: 2rem;
+    color: #fff;
+  }
+  .winners {
+    position: relative;
+    height: auto;
+    left: 000%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .winners .congrats {
+    position: relative;
+    padding: 50px 0px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 3rem;
+  }
+  .winners .card {
+    width: 80%;
+    margin: 10px 0px;
+    padding: 20px 0px;
+  }
+  .winners .card .card-image {
+    height: 50%;
+  }
+  .winners .card .card-image img {
+    width: 40%;
+  }
+  .winners .card .card-text .text-winners {
+    display: block;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  .winners .card .card-text .text-winners-names {
+    display: block;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .final {
+    display: none;
+  }
+  .card-shifted {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .congrats-shifted {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .final-shifted {
+    top: 0%;
+  }
+  .winners-active {
+    left: 0%;
+  }
+  .banner-shifted {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .banner-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    left: -0%;
+  }
+  .congratulate-shifted {
+    left: 0px;
+  }
+  .inactive {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@media (max-width: 400px) and (max-height: 596px) {
+  .asynamite .title {
+    font-size: 2rem;
+  }
+  .asynamite .coding {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .asynamite .details {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .congratulate p {
+    font-size: 1.5rem;
+  }
+  .winners .congrats {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
